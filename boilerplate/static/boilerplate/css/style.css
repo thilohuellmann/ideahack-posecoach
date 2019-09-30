@@ -1,0 +1,40 @@
+.color-accent {
+    border-style: solid;
+    border-width: 4px;
+    border-color: hsl(171, 100%, 41%);
+}
+
+.color-accent__top {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.color-accent__bottom {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.color-accent__left {
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+}
+
+.color-accent__right {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+.breadcrumb {
+    padding-top: 44px;
+    padding-left: 44px;
+}
+
+.main-container {
+    padding-top: 44px;
+    padding-left: 44px;
+    padding-right: 44px;
+}
