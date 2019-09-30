@@ -1,0 +1,23 @@
+{% extends 'boilerplate/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <h1 class="title">Dashboard</h1>
+    <div class="tabs">
+      <ul>
+        <li class="is-active"><a>Pictures</a></li>
+        <li><a>Music</a></li>
+        <li><a>Videos</a></li>
+        <li><a>Documents</a></li>
+      </ul>
+    </div>
+    <div class="columns">
+        <div class="column"><div class="box"><div id="chart1"></div></div></div>
+        <div class="column"><div class="box"><div id="chart2"></div></div></div>
+        <div class="column"><div class="box"><div id="chart3"></div></div></div>
+    </div>
+
+    <script src='{% static "boilerplate/js/dashboard.js" %}'>
+
+{% endblock %}

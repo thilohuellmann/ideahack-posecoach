@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
     <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+    <link rel="stylesheet" href='{% static "boilerplate/css/style.css" %}'>
 
-    <!-- Favicons -->
-    <link rel='apple-touch-icon' href='{% static "colabel/img/colabel_icon.png" %}'>
-    <link rel='icon' href='{% static "colabel/img/colabel_icon.png" %}'>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.8.6/apexcharts.js"></script>
 
     <title>Boilerplate</title>
 
@@ -21,14 +21,63 @@
 
 <body>
 
+<div class="color-accent color-accent__top"></div>
+<nav class="navbar has-shadow is-spaced is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo3.png" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item has-text-primary">
+          <span>
+            <span class="icon is-medium"><i class="fas fa-tachometer-alt"></i></span>
+              Dashboard
+          </span>
+      </a>
+
+      <a class="navbar-item">
+          <span>
+            <span class="icon is-medium"><i class="fas fa-book"></i></span>
+              Documentation
+          </span>
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-light">
+              <span><i class="fas fa-user"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
 <main>
-    <div class="container">
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+        <li><a href="#">Bulma</a></li>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Components</a></li>
+        <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+        </ul>
+    </nav>
+    <div class="main-container">
         {% block content %}
         {% endblock %}
     </div>
 </main>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
 </body>
 
