@@ -38,3 +38,19 @@
     padding-left: 44px;
     padding-right: 44px;
 }
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.inner-box {
+    min-height: 300px;
+}
+
+.logo {
+    margin-left: .5em;
+}

@@ -3,21 +3,42 @@
 
 {% block content %}
 
-    <h1 class="title">Dashboard</h1>
-    <div class="tabs">
-      <ul>
-        <li class="is-active"><a>Pictures</a></li>
-        <li><a>Music</a></li>
-        <li><a>Videos</a></li>
-        <li><a>Documents</a></li>
-      </ul>
-    </div>
-    <div class="columns">
-        <div class="column"><div class="box"><div id="chart1"></div></div></div>
-        <div class="column"><div class="box"><div id="chart2"></div></div></div>
-        <div class="column"><div class="box"><div id="chart3"></div></div></div>
-    </div>
+  <h1 class="title">Dashboard</h1>
+  {% comment %} <div class="tabs">
+    <ul>
+      <li class="is-active"><a>Pictures</a></li>
+      <li><a>Music</a></li>
+      <li><a>Videos</a></li>
+      <li><a>Documents</a></li>
+    </ul>
+  </div> {% endcomment %}
 
-    <script src='{% static "boilerplate/js/dashboard.js" %}'>
+<div class="columns">
+  <!-- Column 1 -->
+  <div class="column">
+    <article class="tile is-child box">
+      <p class="title">Live video</p>
+      {% comment %} <p class="subtitle">With an image</p> {% endcomment %}
+      
+      <div class="is-child box inner-box">
+      </div>
+    </article>
+  </div>
+  <div class="column">
+    <article class="tile is-child box">
+      <p class="title">Evaluation</p>
+      {% comment %} <p class="subtitle">With an image</p> {% endcomment %}
+      {% if 1 < 0.3 %} <!-- Add condition -->
+        <a class="button is-danger is-large is-fullwidth">Bad pose</a>
+      {% elif 1 < 0.7 %}
+          <a class="button is-success is-large is-fullwidth inner-box is-4by3">Great pose</a>
+      {% elif 1 == 1 %}
+          <a class="button is-light is-large is-fullwidth inner-box is-4by3">Unclear</a>
+        {% endif %}
+    </article>
+  </div>
+</div>
+    
+<script src='{% static "boilerplate/js/dashboard.js" %}'>
 
 {% endblock %}
