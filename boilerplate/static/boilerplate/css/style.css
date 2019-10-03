@@ -51,3 +51,17 @@
     margin: 0 5px;
     cursor: pointer;
 }
+
+video {
+    border-radius: 15px;
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+    display: inline-block;
+}
+
+.p5Canvas {
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+}

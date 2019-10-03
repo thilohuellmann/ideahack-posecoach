@@ -3,13 +3,15 @@
 
 {% block content %}
 
+    {% csrf_token %}
+
 <div class="columns">
   <!-- Column 1 -->
   <div class="column">
     <article class="tile is-child">
       <p class="title">Live video</p>
       <p class="subtitle">We analyze the posture in real time...</p>
-      <div class="is-child box inner-box">
+      <div id="video-container" class="is-child box inner-box">
       </div>
     </article>
   </div>
@@ -17,24 +19,20 @@
     <article class="tile is-child is-centered">
       <p class="title">Evaluation</p>
       <p class="subtitle">... and judge the content based on our trained model.</p>
-      {% if 1 < 0.3 %} <!-- Add condition -->
-        <a class="button is-danger is-large is-four-fifths">Bad pose</a>
-      {% elif 1 < 0.7 %}
-          <a class="button is-success is-large is-four-fifths inner-box is-4by3">Great pose</a>
-      {% elif 1 == 1 %}
-          <a class="button is-light is-large is-fullwidth inner-box is-4by3">Unclear</a>
-        {% endif %}
+
+        <a id="bad" class="button is-danger is-large is-four-fifths">Bad pose</a>
+        <a id="good" class="button is-success is-large is-four-fifths inner-box is-4by3">Great pose</a>
+        <a id="unclear" class="button is-light is-large is-fullwidth inner-box is-4by3">Unclear</a>
+
     </article>
   </div>
 </div>
-    
+
 <!-- Control buttons -->
 <div class="buttons is-centered">
   <i id="play" class="fas fa-play control-button fa-6x"></i>
   {% comment %} <i id="pause" class="fas fa-pause control-button fa-7x"></i> {% endcomment %}
   <i id="pause" class="fas fa-pause control-button fa-7x" style="display: none"></i>
 </div>
-
-<script src='{% static "boilerplate/js/dashboard.js" %}'>
 
 {% endblock %}

@@ -6,4 +6,4 @@ djangorestframework==3.9.0
 django-hosts==3.0
 django-cors-headers==2.5.2
 django-model-utils==3.2.0
-Faker==2.0.2
+catboost==0.17.4
