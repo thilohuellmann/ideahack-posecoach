@@ -8,7 +8,8 @@ DEBUG = True
 SECURE_SSL_REDIRECT = False
 
 ALLOWED_HOSTS = [
-    '127.0.0.1'
+    '127.0.0.1',
+    'posecoach.herokuapp.com'
 ]
 
 # Application definition
