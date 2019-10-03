@@ -3,35 +3,24 @@
 
 {% block content %}
 
-  <h1 class="title">Dashboard</h1>
-  {% comment %} <div class="tabs">
-    <ul>
-      <li class="is-active"><a>Pictures</a></li>
-      <li><a>Music</a></li>
-      <li><a>Videos</a></li>
-      <li><a>Documents</a></li>
-    </ul>
-  </div> {% endcomment %}
-
 <div class="columns">
   <!-- Column 1 -->
   <div class="column">
-    <article class="tile is-child box">
+    <article class="tile is-child">
       <p class="title">Live video</p>
-      {% comment %} <p class="subtitle">With an image</p> {% endcomment %}
-      
+      <p class="subtitle">We analyze the posture in real time...</p>
       <div class="is-child box inner-box">
       </div>
     </article>
   </div>
   <div class="column">
-    <article class="tile is-child box">
+    <article class="tile is-child is-centered">
       <p class="title">Evaluation</p>
-      {% comment %} <p class="subtitle">With an image</p> {% endcomment %}
+      <p class="subtitle">... and judge the content based on our trained model.</p>
       {% if 1 < 0.3 %} <!-- Add condition -->
-        <a class="button is-danger is-large is-fullwidth">Bad pose</a>
+        <a class="button is-danger is-large is-four-fifths">Bad pose</a>
       {% elif 1 < 0.7 %}
-          <a class="button is-success is-large is-fullwidth inner-box is-4by3">Great pose</a>
+          <a class="button is-success is-large is-four-fifths inner-box is-4by3">Great pose</a>
       {% elif 1 == 1 %}
           <a class="button is-light is-large is-fullwidth inner-box is-4by3">Unclear</a>
         {% endif %}
@@ -39,6 +28,13 @@
   </div>
 </div>
     
+<!-- Control buttons -->
+<div class="buttons is-centered">
+  <i id="play" class="fas fa-play control-button fa-6x"></i>
+  {% comment %} <i id="pause" class="fas fa-pause control-button fa-7x"></i> {% endcomment %}
+  <i id="pause" class="fas fa-pause control-button fa-7x" style="display: none"></i>
+</div>
+
 <script src='{% static "boilerplate/js/dashboard.js" %}'>
 
 {% endblock %}

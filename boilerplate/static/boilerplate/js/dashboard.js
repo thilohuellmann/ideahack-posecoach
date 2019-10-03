@@ -92,3 +92,31 @@ $(document).ready(function () {
 
         chart3.render()
 })
+
+// $('#play').on('click', function () {
+//     $('#play').toggle()
+//     $('#pause').toggle()
+// })
+
+// 
+// Toggle scripts sind base.html!!!
+// 
+
+
+// Works in browser, not in script
+$('#play').click( function () {
+    $('#play').toggle()
+    $('#pause').toggle()
+    window.start_time = Date.now();
+    console.log(start_time)
+})
+
+$('#pause').click( function () {
+    $('#pause').toggle()
+    $('#play').toggle()
+})
+
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    console.log( "ready!" );
+})

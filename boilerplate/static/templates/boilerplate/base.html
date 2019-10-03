@@ -12,10 +12,67 @@
     <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
     <link rel="stylesheet" href='{% static "boilerplate/css/style.css" %}'>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.8.6/apexcharts.js"></script>
+    
+    <script>
 
-    <title>Boilerplate</title>
+
+    // Works in browser & from here, not in jsfile
+    // A $( document ).ready() block.
+    
+    {% comment %} $( document ).ready(function() {
+        console.log( "ready!" );
+      }) {% endcomment %}
+    
+    $( document ).ready(function() {
+        $('#play').click( function () {
+          $('#play').toggle()
+          $('#pause').toggle()
+          var state = "play"
+          window.start_time = Date.now()
+          // console.log(start_time)
+        })
+
+        $('#pause').click( function () {
+          $('#pause').toggle()
+          $('#play').toggle()
+          var state = "pause"
+          // console.log("var state:", state, "Time:", Date.now())
+          window.end_time = Date.now()
+          var duration = (end_time - start_time)/1000
+          console.log("duration:", duration)
+        })
+      })
+
+    // delete again
+    let state = "play"
+
+    let evaluation = "positive" // get result from evaluation, change while conditional afterwards
+
+    let positive_count = 0
+    let negative_count = 0
+    let neutral_count = 0
+
+    {% comment %} while (state == "play") {
+        
+        if (evaluation == "positive") {
+          positive_count++;
+        }
+        else if (evaluation == -1) {
+          negative_count++;
+        }
+        else if (evaluation == "neutral") {
+          neutral_count++;
+        }
+
+    } {% endcomment %}
+
+    console.log(positive_count)
+
+    </script>
+
+    <title>PoseCoach</title>
 
 </head>
 
@@ -27,7 +84,7 @@
     <a class="navbar-item" href="/">
       {% comment %} <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo3.png" width="112" height="28"> {% endcomment %}
       <img src="https://i.ibb.co/9tdC9qM/pose-logo.png" width="28" height="28">
-      <div class="logo">PoseCheck      
+      <div class="logo">PoseCoach      
       </div>
     </a>
 
@@ -40,7 +97,7 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item has-text-primary">
+      <a class="navbar-item has-text-light">
           <span>
             <span class="icon is-medium"><i class="fas fa-tachometer-alt"></i></span>
               Dashboard
@@ -71,7 +128,7 @@
     <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
         <li><a href="#">Home</a></li>
-        <li class="is-active"><a href="#">LiveCheck</a></li>
+        <li class="is-active"><a href="#">InstantCoach</a></li>
         </ul>
     </nav>
     <div class="main-container">
