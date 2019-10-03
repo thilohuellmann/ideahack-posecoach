@@ -10,7 +10,7 @@
   <div class="column">
     <article class="tile is-child">
       <p class="title">Live video</p>
-      <p class="subtitle">We analyze the posture in real time...</p>
+      <p class="subtitle">We analyze your posture in real time...</p>
       <div id="video-container" class="is-child box inner-box">
       </div>
     </article>
@@ -18,21 +18,26 @@
   <div class="column">
     <article class="tile is-child is-centered">
       <p class="title">Evaluation</p>
-      <p class="subtitle">... and judge the content based on our trained model.</p>
+      <p class="subtitle">... and judge it based on our trained model.</p>
 
-        <a id="bad" class="button is-danger is-large is-four-fifths">Bad pose</a>
-        <a id="good" class="button is-success is-large is-four-fifths inner-box is-4by3">Great pose</a>
-        <a id="unclear" class="button is-light is-large is-fullwidth inner-box is-4by3">Unclear</a>
+        <div id="bad" class="box has-text-centered is-vcentered" style="display: none">
+            <span>🙅</span>
+            <br>
+            <span>Bad pose</span>
+        </div>
+        <div id="good" class="box has-text-centered is-vcentered" style="display: none">
+            <span>🙆🏼‍</span>
+            <br>
+            <span>Great pose</span>
+        </div>
+        <div id="unclear" class="box has-text-centered is-vcentered">
+            <span>🤷🏼‍</span>
+            <br>
+            <span>Unclear</span>
+        </div>
 
     </article>
   </div>
-</div>
-
-<!-- Control buttons -->
-<div class="buttons is-centered">
-  <i id="play" class="fas fa-play control-button fa-6x"></i>
-  {% comment %} <i id="pause" class="fas fa-pause control-button fa-7x"></i> {% endcomment %}
-  <i id="pause" class="fas fa-pause control-button fa-7x" style="display: none"></i>
 </div>
 
 {% endblock %}

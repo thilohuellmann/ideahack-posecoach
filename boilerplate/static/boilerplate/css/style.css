@@ -64,4 +64,30 @@ video {
     transform: rotateY(180deg);
     -webkit-transform:rotateY(180deg); /* Safari and Chrome */
     -moz-transform:rotateY(180deg); /* Firefox */
+    border-radius: 6px;
+}
+
+#bad {
+    padding-top: 80px;
+    background-color: hsl(348, 100%, 61%);
+}
+
+#good {
+    padding-top: 80px;
+    background-color: hsl(141, 71%, 48%);
+}
+
+#unclear {
+    padding-top: 80px;
+    background-color: hsl(0, 0%, 86%);
+}
+
+.box {
+    font-size: 100px;
+    color: hsl(0, 0%, 98%);
+    height: 450px;
+}
+
+#video-container {
+    height: 450px;
 }
